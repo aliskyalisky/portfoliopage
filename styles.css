@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#26201b, #120f0d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    color: #3b2f28;
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    text-align: center;
+    letter-spacing: 8px;
+    transition: 0.2s;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+p.greet,
+p.askname {
+    animation-name: start;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+p.greet {
+    animation-delay: 2s;
+}
+
+p.askname {
+    animation-delay: 4s;
+}
+
+@keyframes start {
+    0% {opacity: 0;}
+    50% {opacity: 1; color: #fae8de; text-shadow: 0px 0px 2px #fae8de;}
+    100% {opacity: 1;}
+}
+
+@keyframes start2 {
+    0% {width: 0px;}
+    100% {width: 200px;}
+}
+
+@keyframes start3 {
+    0% {opacity: 0; filter: blur(2px);}
+    50% {opacity: 1; background: #fae8de; box-shadow: 0px 0px 15px -8px #fae8de;}
+    100% {opacity: 1;}
+}
+
+
+p:hover {
+    color: #7d6354;
+    cursor: crosshair;
+}
+
+.titleletter {
+    display: inline-block;
+    padding: 0 20px;
+    color: #fae8de;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0px 0px 4px #fae8de;
+    cursor: crosshair;
+}
+
+.f1, .f2, .f3, .f4, .f5, .f6,
+.f7, .f8, .f9, .f10, .f11 {
+    animation-name: flash;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.titleletter.f1 {animation-duration: 1.5s;}
+.titleletter.f2 {animation-duration: 1.2s;}
+.titleletter.f3 {animation-duration: 1.3s;}
+.titleletter.f4 {animation-duration: 1.7s;}
+.titleletter.f5 {animation-duration: 1.27s;}
+.titleletter.f6 {animation-duration: 1.5s;}
+.titleletter.f7 {animation-duration: 1.52s;}
+.titleletter.f8 {animation-duration: 1.73s;}
+.titleletter.f9 {animation-duration: 1.9s;}
+.titleletter.f10 {animation-duration: 2.5s;}
+.titleletter.f11 {animation-duration: 0.9s;}
+
+@keyframes flash {
+    0% {opacity: 0;}
+    25% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 1;
+        filter: none;
+    }
+    75% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100% {opacity: 0;}
+}
+
+.header {
+    position: absolute;
+   top: 0;
+   display: flex;
+   margin: 0;
+   padding: 10px;
+
+}
+
+
+div.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.btncontainer button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3b2f28;
+    transition: 0.4s;
+    cursor: crosshair;
+    color: #120f0d;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0;
+    animation-name: start3;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.5s;
+}
+
+
+.btncontainer button:hover {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0px 0px 15px -8px #fae8de;
+    color: #120f0d;
+    border: 2px solid #fae8de;
+    background: #7d6354;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    position: absolute;
+    border: none;
+    background: #3b2f28;
+    border-radius: 3px;
+    margin-left: -21%;
+    margin-top: 15px;
+    padding: 5px 0px;
+    transition: 0.2s;
+    color: #fae8de;
+    font-family: 'Press Start 2P', cursive;
+    width: 0px;
+    text-align: center;
+    animation-name: start2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+
+form input:hover {
+    cursor: crosshair;
+    background: #7d6354
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg);
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
